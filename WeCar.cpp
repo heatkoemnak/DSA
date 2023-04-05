@@ -23,3 +23,11 @@ vector<Car> cars = {
         {4, "Volkswagen", "Golf", "compact", 2014, 8800},
         {5, "Toyota", "RAV4", "crossover", 2016, 12800}
 };
+//create function to display cars and price display $
+
+void displayCars() {
+    cout << setw(5) << "ID" << setw(15) << "Make" << setw(15) << "Model" << setw(15) << "Type" << setw(10) << "Year" << setw(14) << "Price" << endl;
+    for (Car car : cars) {
+        cout << setw(5) << car.id << setw(15) << car.make << setw(15) << car.model << setw(15) << car.type << setw(10) << car.year << setw(10) << "$" << car.price << endl;
+    }
+}
