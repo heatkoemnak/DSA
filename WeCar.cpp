@@ -31,3 +31,13 @@ void displayCars() {
         cout << setw(5) << car.id << setw(15) << car.make << setw(15) << car.model << setw(15) << car.type << setw(10) << car.year << setw(10) << "$" << car.price << endl;
     }
 }
+//import the new 2 cars to our shop
+
+void addCars(int id, string make, string model, string type, int year, int price,
+             int id1, string make1, string model1, string type1, int year1, int price1) {
+    cars.push_back({id, make, model, type, year, price});
+    cars.push_back({id1, make1, model1, type1, year1, price1});
+
+    displayCars();
+
+}
