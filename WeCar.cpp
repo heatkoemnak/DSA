@@ -41,3 +41,13 @@ void addCars(int id, string make, string model, string type, int year, int price
     displayCars();
 
 }
+//remove car and print id was delete
+void sellCar(int id) {
+    for (int i = 0; i < cars.size(); i++) {
+        if (cars[i].id == id) {
+            cars.erase(cars.begin() + i);
+            cout << "Car with ID " << id << " was sold." << endl;
+        }
+    }
+    
+}
