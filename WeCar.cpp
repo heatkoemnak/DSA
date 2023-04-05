@@ -51,3 +51,17 @@ void sellCar(int id) {
     }
     
 }
+//Then the customer comes and asks to see if any car in model Camry is available cars in shop.
+void checkAvailability() {
+    vector<int> availableCars;
+    for (Car car : cars) {
+        if (car.model.find("Camry") != string::npos) {
+            availableCars.push_back(car.id);
+        }
+    }
+    if (!availableCars.empty()) {
+        cout << "Model Camry is available in shop" << endl;
+    } else {
+        cout << "Model Camry is not available in shop" << endl;
+    }
+}
