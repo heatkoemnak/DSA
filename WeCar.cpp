@@ -65,3 +65,40 @@ void checkAvailability() {
         cout << "Model Camry is not available in shop" << endl;
     }
 }
+//most expensive and lowest price 
+void mostExpensive() {
+    int maxPrice = 0;
+    int minPrice = 0;
+    for (Car car : cars) {
+        if (car.price > maxPrice) {
+            maxPrice = car.price;
+        }
+        if (car.price < minPrice) {
+            minPrice = car.price;
+        }
+    }
+    cout << "Most expensive car is $" << maxPrice << endl;
+    cout << "Lowest price car is $" << minPrice << endl;
+}
+
+
+int main() {
+     cout<<endl;
+     displayCars();
+     cout<<endl;
+        addCars(6, "Toyota", "4Runner", "suv", 2015, 16900, 7, "Honda", "CR-V", "crossover", 2016, 17900);
+        
+        cout<<endl;
+        sellCar(1);
+        
+        sellCar(2);
+        cout<<endl;
+        displayCars();
+        cout << "Affter sold" << endl;
+
+        checkAvailability();
+        cout<<endl;
+        mostExpensive();
+        cout<<endl;
+    return 0;
+}
